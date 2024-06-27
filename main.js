@@ -12,13 +12,13 @@ const addressWarn = document.getElementById("address-warn")
 
 let cart = [];
 
-//Abrir modal carrinho
+
 cartBtn.addEventListener("click", function () {
     updateCartModal();
     cartModal.style.display = "flex"
 });
 
-//fechar modal
+
 cartModal.addEventListener("click", function (event) {
     if (event.target === cartModal) {
         cartModal.style.display = "none"
@@ -39,7 +39,7 @@ menu.addEventListener("click", function (event) {
     }
 });
 
-//function add carrinho
+
 function addToCart(name, price) {
     const existingItem = cart.find(item => item.name === name)
 
@@ -55,7 +55,7 @@ function addToCart(name, price) {
     updateCartModal()
 }
 
-//atulazia carrinho
+
 function updateCartModal() {
     cartItemsContainer.innerHTML = "";
     let total = 0;
@@ -92,7 +92,7 @@ function updateCartModal() {
 
 }
 
-// function remover item carrinho
+
 cartItemsContainer.addEventListener("click", function (event) {
     if (event.target.classList.contains("remove-from-cart-btn")) {
         const name = event.target.getAttribute("data-name")
